@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/hsfvieira/hello-world-golang/usecases"
 )
@@ -21,5 +23,7 @@ func main() {
 
 	http.HandleFunc("GET /user/{username}", getUserByUsernameFormController)
 
-	http.ListenAndServe(":8080", nil)
+	port := fmt.Sprintf(":%s", os.Getenv("PORT"))
+
+	http.ListenAndServe(port, nil)
 }
