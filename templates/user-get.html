@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todos os usuários</title>
+  </head>
+  <body>
+    <form method="post" enctype="multipart/form-data">
+      <input disabled name="username" type="text" placeholder="Username" value="{{ .Username }}">
+      <input disabled name="name" type="text" placeholder="Name" value="{{ .Name }}">
+      <input disabled name="email" type="text" placeholder="Email" value="{{ .Email }}">
+    </form>
+  </body>
+</html>
