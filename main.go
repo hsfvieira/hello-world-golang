@@ -17,11 +17,11 @@ func main() {
 
 	http.HandleFunc("GET /users", viewController("templates/users.html", &usecases.Users))
 
-	http.HandleFunc("GET /user/new", viewController("templates/user-new.html", nil))
+	http.HandleFunc("GET /users/new", viewController("templates/user-new.html", nil))
 
-	http.HandleFunc("POST /user/new", postUsersFormController)
+	http.HandleFunc("POST /users/new", postUsersFormController)
 
-	http.HandleFunc("GET /user/{username}", getUserByUsernameFormController)
+	http.HandleFunc("GET /users/{username}", getUserByUsernameFormController)
 
 	port := fmt.Sprintf(":%s", os.Getenv("PORT"))
 
